@@ -8,13 +8,17 @@ describe("Rectangle", () => {
     assert.strictEqual(Rectangle.length, 2);
   });
   it("check if square", () => {
-    assert.strictEqual(new Rectangle(2, 3).isSquare, "false");
-    assert.strictEqual(new Rectangle(2, 2).isSquare, "true");
+    const pasCarre = new Rectangle(2, 3);
+    const carre = new Rectangle(2, 2);
+    assert.strictEqual(pasCarre.isSquare(), false);
+    assert.strictEqual(carre.isSquare(), true);
   });
   it("return area ", () => {
-    assert.strictEqual(new Rectangle(13, 7).getArea, "91");
+    const rectangle = new Rectangle(13, 7);
+    assert.strictEqual(rectangle.getArea(), 91);
   });
   it("return perimeter", () => {
-    assert.strictEqual(new Rectangle(8, 10).getPerimeter, "36");
+    const rectangle = new Rectangle(8, 10);
+    assert.strictEqual(rectangle.getPerimeter(), 36);
   });
 });
